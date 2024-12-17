@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- MathJax for LaTeX rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">My Personal Website</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline">Home</a></li>
+                    <li><a href="about.html" class="hover:underline">About</a></li>
+                    <li><a href="research.html" class="hover:underline">Research</a></li>
+                    <li><a href="blog/index.html" class="hover:underline">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-8">
+        <section class="text-center">
+            <h2 class="text-3xl font-bold">Welcome to My Website</h2>
+            <p class="mt-4">I am a first-year PhD student. Here, you can find information about my research, blog posts, and more.</p>
+        </section>
+
+        <section class="mt-8">
+            <h3 class="text-2xl font-semibold">Quick LaTeX Example</h3>
+            <p class="mt-2">Here is an example of a mathematical formula rendered with LaTeX:</p>
+            <p class="text-blue-600 mt-2">\( E = mc^2 \)</p>
+        </section>
+
+        <section class="mt-8">
+            <h3 class="text-2xl font-semibold">Interactive Chart</h3>
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 My Personal Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart Script -->
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March'],
+                datasets: [{
+                    label: 'Example Dataset',
+                    data: [10, 20, 30],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
