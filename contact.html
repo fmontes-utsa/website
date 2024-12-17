@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        /* General reset */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #0077cc;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Main content */
+        .contact-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-container h1 {
+            text-align: center;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #0077cc;
+        }
+
+        button {
+            padding: 0.75rem;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        /* Footer Links */
+        .footer {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .footer a {
+            color: #0077cc;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <div class="contact-container">
+        <h1>Get in Touch</h1>
+        <p>Feel free to reach out to me via this form or through my contact details below.</p>
+        
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Social Media / Contact Links -->
+        <div class="footer">
+            <p>Or connect with me here:</p>
+            <a href="mailto:fernando.montes2@my.utsa.edu">Email</a>
+            <a href="https://www.linkedin.com/in/fernandopmontes/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/fmontes-utsa" target="_blank">GitHub</a>
+        </div>
+    </div>
+</body>
+</html>
